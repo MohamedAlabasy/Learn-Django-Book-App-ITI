@@ -1,0 +1,50 @@
+{% extends 'books/base.html' %}
+{% load static %}
+{% block title %}Book data{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-3">
+    <div class="row d-flex justify-content-around text-center">
+        <div style="width: 50rem; margin: 0.2rem;">
+            <img src="{{book.image}}" style="max-height: 350px;" class="card-img-top">
+            <div class="card-footer fs-6 font-weight-bold border border-bottom-2 text-center">
+                {{book.name}}
+            </div>
+            <div class="card-body py-0">
+                <div class="book-content">
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-12">
+                            <span>Publish date</span> :
+                            {{book.publish_date}}
+                        </div>
+                        <div class="col-12">
+                            <span>Add to site at</span> :
+                            {{book.add_to_site}}
+                        </div>
+                        <div class="col-12">
+                            <span>Author</span> :
+                            {{book.author_id}}
+                        </div>
+                        <div class=" col-12">
+                            <span>Price</span> :
+                            {{book.price}}
+                        </div>
+                        <div class="col-12">
+                            <span>Appropriate</span> :
+                            {{book.appropriate}}
+                        </div>
+                        <div class="col-12">
+                            <span>Summary</span> :
+                            {{book.summary}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer my-5">
+                <a class="btn btn-dark" href="{% url 'list_books' %}">Back To Home</a>
+                <a class="btn btn-warning" href="{% url 'show_author' book.author_id %}">Show Author</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

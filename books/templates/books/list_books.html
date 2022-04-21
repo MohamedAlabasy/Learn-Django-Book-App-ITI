@@ -1,0 +1,30 @@
+{% extends 'books/base.html' %}
+{% load static %}
+{% block title %}List of Books{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-3">
+    <div class="row d-flex justify-content-around text-center">
+        {% for book in books %}
+        <div style="width: 18rem; margin: 0.2rem;">
+            <!-- <img src="{% static 'books/media/image1.jpg' %}" style="max-height: 350px;" class="card-img-top"> -->
+            <img src="{{book.image}}" style="max-height: 350px;" class="card-img-top">
+            <div class="card-footer fs-6 font-weight-bold border border-bottom-2 text-center">{{book.name}}
+            </div>
+            <div class="col-12">
+                <span>Author</span> :
+
+                <span> {{book.author_id}} </span>
+
+            </div>
+
+            <div class="card-footer">
+                <a class="btn btn-dark" href="{% url 'show_book' book.id %}">Book Details</a>
+            </div>
+        </div>
+        {% empty %}
+        <h1>No Data to show</h1>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
