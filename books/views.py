@@ -1,7 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book, Author
-from django.shortcuts import redirect
-from .forms import CreateBooks
+from .forms import CreateBooks, UpdateBooks
 from django.utils import timezone
 
 
@@ -56,9 +55,9 @@ def create_book(request):
            # new_book = Book.objects.create(
            #     name=name,
            #     summary=summary,
-           #     publish_date=timezone.now,
+           #     publish_date=timezone.now(),
            #     image=image,
-           #     add_to_site=timezone.now,
+           #     add_to_site=timezone.now(),
            #     price=price,
            #     appropriate=appropriate,
            #     author=author,
@@ -67,23 +66,34 @@ def create_book(request):
         context = {
             "form": form
         }
-        return redirect('list_books')
+        return redirect('show_book', book_id=new_book.id)
     else:  # if request from home page => to show form in create page
-        form = CreateBooks(request.POST)
+        form = CreateBooks()
         context = {
             "form": form
         }
         return render(request, 'books/create_book.html', context=context)
 
 
-def update_book(request):
-    context = {
-        "data": "update book"
-    }
-    return render(request, 'books/update_book.html', context=context)
+def update_book(request, book_id):
+    book = Book.objects.get(id=book_id)
+    # book = get_object_or_404(Book, book_id)
+    if request.method == 'POST':
+        form = UpdateBooks(request.POST, instance=book)
+        if form.is_valid():
+            updated_book = form.save()
+        context = {
+            "form": form
+        }
+        return redirect('show_book', book_id=updated_book.id)
+    else:
+        form = UpdateBooks(instance=book)
+        context = {
+            "form": form
+        }
+        return render(request, 'books/update_book.html', context=context)
 
 
 def delete_book(request, book_id):
     Book.objects.get(id=book_id).delete()
-    response = redirect('list_books')
     return redirect('list_books')
