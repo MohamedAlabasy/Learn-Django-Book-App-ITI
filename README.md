@@ -9,7 +9,6 @@
 ![image](https://user-images.githubusercontent.com/93389016/164882770-847e51cf-e337-4682-82b9-d35a7444cfa8.png)
 ![image](https://user-images.githubusercontent.com/93389016/164882789-2d3fba77-9cac-4afe-8618-a3e7937a2515.png)
 ### All Authors
-![image](https://user-images.githubusercontent.com/93389016/164565995-cb70d8fd-3b4c-43b5-bcf9-48b5ea92a278.png)
+![image](https://user-images.githubusercontent.com/93389016/164885174-de043b1f-8e56-4e3e-9d25-9a1fba8c6a9b.png)
 ### Show Author
-![image](https://user-images.githubusercontent.com/93389016/164566426-89f7821b-5f24-422f-9266-579aefb5be7d.png)
-
+![image](https://user-images.githubusercontent.com/93389016/164885195-c448c6f5-ea36-4374-bafd-5ad51a00f5a4.png)
