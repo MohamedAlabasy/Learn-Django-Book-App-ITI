@@ -11,4 +11,4 @@
 ### All Authors
 ![image](https://user-images.githubusercontent.com/93389016/164885174-de043b1f-8e56-4e3e-9d25-9a1fba8c6a9b.png)
 ### Show Author
-![image](https://user-images.githubusercontent.com/93389016/164883909-8c8984f2-7cce-4c0e-9b9a-9bec6c8a42d9.png)
+![image](https://user-images.githubusercontent.com/93389016/164885195-c448c6f5-ea36-4374-bafd-5ad51a00f5a4.png)
