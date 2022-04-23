@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Book, Author
+from django.shortcuts import redirect
+
 # Create your views here.
 
 
@@ -34,3 +36,22 @@ def show_author(request, author_id):
         "books": Book.objects.filter(author_id=author_id).all(),
     }
     return render(request, 'books/show_author.html', context=context)
+
+
+def create_book(request):
+    context = {
+        "data": "Create New Books"
+    }
+    return render(request, 'books/create_book.html', context=context)
+
+
+def update_book(request):
+    context = {
+        "data": "update book"
+    }
+    return render(request, 'books/update_book.html', context=context)
+
+
+def delete_book(request):
+    response = redirect('list_books')
+    return response
