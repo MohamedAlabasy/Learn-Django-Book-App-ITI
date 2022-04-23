@@ -7,6 +7,7 @@ from .models import Book
 class CreateBooks(forms.ModelForm):
     class Meta:
         model = Book
+        # fields = "__all__"
         fields = [
             "name",
             "summary",

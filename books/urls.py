@@ -6,7 +6,7 @@ urlpatterns = [
     path('<int:book_id>', show_book, name="show_book"),
     path('create_book', create_book, name="create_book"),
     path('update_book', update_book, name="update_book"),
-    path('delete_book', delete_book, name="delete_book"),
+    path('delete_book/<int:book_id>', delete_book, name="delete_book"),
     path('author/', list_authors, name="list_authors"),
     path('author/<int:author_id>', show_author, name="show_author"),
 ]

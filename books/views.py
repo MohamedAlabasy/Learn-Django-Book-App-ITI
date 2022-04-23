@@ -56,18 +56,18 @@ def create_book(request):
            # new_book = Book.objects.create(
            #     name=name,
            #     summary=summary,
-           #     publish_date=timezone.now(),
+           #     publish_date=timezone.now,
            #     image=image,
-           #     add_to_site=timezone.now(),
+           #     add_to_site=timezone.now,
            #     price=price,
            #     appropriate=appropriate,
-           #     author=1,
+           #     author=author,
            # )
 
         context = {
             "form": form
         }
-        return render(request, 'books/create_book.html', context=context)
+        return redirect('list_books')
     else:  # if request from home page => to show form in create page
         form = CreateBooks(request.POST)
         context = {
@@ -83,6 +83,7 @@ def update_book(request):
     return render(request, 'books/update_book.html', context=context)
 
 
-def delete_book(request):
+def delete_book(request, book_id):
+    Book.objects.get(id=book_id).delete()
     response = redirect('list_books')
-    return response
+    return redirect('list_books')
