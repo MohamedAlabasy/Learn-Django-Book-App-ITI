@@ -5,14 +5,14 @@
 {% block content %}
 <div class="container-fluid mt-3">
     <div class="row d-flex justify-content-around text-center">
-        <div style="width: 50rem; margin: 0.2rem;">
+        <div style="width: 30rem; margin: 0.2rem;">
             <div class=" my-3">
                 <a class="btn btn-dark" href="{% url 'list_books' %}">Back To Home</a>
                 <a class="btn btn-warning" href="{% url 'show_author' book.author_id %}">Show Author</a>
                 <a class="btn btn-primary" href="{% url 'update_book' book.id %}">Update</a>
                 <a class="btn btn-danger" href="{% url 'delete_book' book.id %}">Delete</a>
             </div>
-            <img src="{{book.image}}" style="max-height: 350px;" class="card-img-top">
+            <img src="{{book.image}}" style="max-height: 500px;" class="card-img-top">
             <div class="card-footer fs-6 font-weight-bold border border-bottom-2 text-center">
                 {{book.name}}
             </div>
