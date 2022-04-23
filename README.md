@@ -1,0 +1,15 @@
+# lab3-Django
+### All Books
+![image](https://user-images.githubusercontent.com/93389016/164882470-ca6b7d39-890d-42ae-b1a2-374693147a86.png)
+### create New Book
+![image](https://user-images.githubusercontent.com/93389016/164882665-5e5198aa-c222-4018-838d-f8d036fb4272.png)
+### Show Book
+![image](https://user-images.githubusercontent.com/93389016/164882681-b28b2a27-c43d-44a4-af6a-e296355bbc6f.png)
+### Update New Book
+![image](https://user-images.githubusercontent.com/93389016/164882770-847e51cf-e337-4682-82b9-d35a7444cfa8.png)
+![image](https://user-images.githubusercontent.com/93389016/164882789-2d3fba77-9cac-4afe-8618-a3e7937a2515.png)
+### All Authors
+![image](https://user-images.githubusercontent.com/93389016/164565995-cb70d8fd-3b4c-43b5-bcf9-48b5ea92a278.png)
+### Show Author
+![image](https://user-images.githubusercontent.com/93389016/164566426-89f7821b-5f24-422f-9266-579aefb5be7d.png)
+
